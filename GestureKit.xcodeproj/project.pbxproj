@@ -10,6 +10,12 @@
 		A150A81D1B7D0F48007E8AB3 /* GestureKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A150A81C1B7D0F48007E8AB3 /* GestureKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A150A8241B7D0F48007E8AB3 /* GestureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A150A8191B7D0F48007E8AB3 /* GestureKit.framework */; };
 		A150A8291B7D0F48007E8AB3 /* GestureKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8281B7D0F48007E8AB3 /* GestureKitTests.swift */; };
+		A17D18B31B7D33C80031938E /* GKGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8341B7D0F8D007E8AB3 /* GKGesture.swift */; };
+		A17D18B41B7D33CC0031938E /* GKPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8381B7D0F8D007E8AB3 /* GKPattern.swift */; };
+		A17D18B51B7D33CE0031938E /* GKQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8371B7D0F8D007E8AB3 /* GKQueue.swift */; };
+		A17D18B61B7D33D10031938E /* GKRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8361B7D0F8D007E8AB3 /* GKRecorder.swift */; };
+		A17D18B71B7D33D40031938E /* GKClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8351B7D0F8D007E8AB3 /* GKClassifier.swift */; };
+		A17D18B81B7D33D60031938E /* GKUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8391B7D0F8D007E8AB3 /* GKUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		A150A8231B7D0F48007E8AB3 /* GestureKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A150A8281B7D0F48007E8AB3 /* GestureKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureKitTests.swift; sourceTree = "<group>"; };
 		A150A82A1B7D0F48007E8AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A150A8341B7D0F8D007E8AB3 /* GKGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGesture.swift; sourceTree = "<group>"; };
+		A150A8351B7D0F8D007E8AB3 /* GKClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKClassifier.swift; sourceTree = "<group>"; };
+		A150A8361B7D0F8D007E8AB3 /* GKRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRecorder.swift; sourceTree = "<group>"; };
+		A150A8371B7D0F8D007E8AB3 /* GKQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKQueue.swift; sourceTree = "<group>"; };
+		A150A8381B7D0F8D007E8AB3 /* GKPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPattern.swift; sourceTree = "<group>"; };
+		A150A8391B7D0F8D007E8AB3 /* GKUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +83,14 @@
 		A150A81B1B7D0F48007E8AB3 /* GestureKit */ = {
 			isa = PBXGroup;
 			children = (
-				A150A81C1B7D0F48007E8AB3 /* GestureKit.h */,
+				A150A8341B7D0F8D007E8AB3 /* GKGesture.swift */,
+				A150A8381B7D0F8D007E8AB3 /* GKPattern.swift */,
+				A150A8371B7D0F8D007E8AB3 /* GKQueue.swift */,
+				A150A8361B7D0F8D007E8AB3 /* GKRecorder.swift */,
+				A150A8351B7D0F8D007E8AB3 /* GKClassifier.swift */,
+				A150A8391B7D0F8D007E8AB3 /* GKUtilities.swift */,
 				A150A81E1B7D0F48007E8AB3 /* Info.plist */,
+				A150A81C1B7D0F48007E8AB3 /* GestureKit.h */,
 			);
 			path = GestureKit;
 			sourceTree = "<group>";
@@ -142,6 +160,7 @@
 		A150A8101B7D0F48007E8AB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = SenseWatch;
 				TargetAttributes = {
@@ -193,6 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17D18B81B7D33D60031938E /* GKUtilities.swift in Sources */,
+				A17D18B71B7D33D40031938E /* GKClassifier.swift in Sources */,
+				A17D18B61B7D33D10031938E /* GKRecorder.swift in Sources */,
+				A17D18B51B7D33CE0031938E /* GKQueue.swift in Sources */,
+				A17D18B41B7D33CC0031938E /* GKPattern.swift in Sources */,
+				A17D18B31B7D33C80031938E /* GKGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,32 +332,39 @@
 		A150A82E1B7D0F48007E8AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GestureKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SenseWatch.GestureKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A150A82F1B7D0F48007E8AB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GestureKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SenseWatch.GestureKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -375,6 +407,7 @@
 				A150A82F1B7D0F48007E8AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A150A8301B7D0F48007E8AB3 /* Build configuration list for PBXNativeTarget "GestureKitTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +416,7 @@
 				A150A8321B7D0F48007E8AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
