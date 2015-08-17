@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+    GKQueue is used to store incoming physical data
+    Use enque() to store new data
+*/
 public class GKQueue: NSObject {
     
     private var _data = [[Double]]()

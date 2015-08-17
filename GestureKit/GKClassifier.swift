@@ -40,6 +40,13 @@ public class GKClassifier: NSObject {
             return _window
         }
     }
+    private var _dataQueue : GKQueue!
+    public var dataQueue : GKQueue {
+        get{
+            return _dataQueue
+        }
+    }
+    
     private var costQueue = [[Double]]()
     
     public var length : Int {
@@ -60,13 +67,19 @@ public class GKClassifier: NSObject {
     }
     
     public init(patterns : [GKPattern], minPeakHeight : [Double], minProminence : Double, peakHalfWidth : Int, window : Int) {
+        super.init()
         if patterns.count > 0 && window >= 0 && minPeakHeight.count == patterns.count && minProminence < 0 && peakHalfWidth > 0 {
+            //  parameters are valid
             if patterns.aligned() {
+                //  set properties
                 self._patterns = patterns
                 self._minPeakHeight = minPeakHeight
                 self._minProminence = minProminence
                 self._peakHalfWidth = peakHalfWidth
                 self._window = window
+                //  create new queue
+                self._dataQueue = GKQueue(length: self.length, width: self.width)
+                //  init costQueue
                 for _ in 0..<peakHalfWidth {
                     self.costQueue.append(Array(count: patterns.count, repeatedValue: 0.0))
                 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+/*
+    GKPattern is used store physical data in 2D-Array to represent a gesture
+    Length: represent the amount of data in time
+    Width: represent the amount of data in one data point
+*/
 public class GKPattern: NSObject {
     
     private var _name : String = ""
@@ -56,7 +61,7 @@ public class GKPattern: NSObject {
         do{
             let jsonData = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions.PrettyPrinted)
             let jsonStr = NSString(data: jsonData, encoding: NSUTF8StringEncoding)
-            let fileName = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0].stringByAppendingPathComponent("\(name).pttn")
+            let fileName = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0].stringByAppendingString("\(name).pttn")
             try jsonStr?.writeToFile(fileName, atomically: true, encoding: NSUTF8StringEncoding)
         } catch let error as NSError {
             print(error)
@@ -64,6 +69,9 @@ public class GKPattern: NSObject {
     }
 }
 
+/*
+    GKPatterns are pre-defined GKPattern instances
+*/
 public class GKPatterns {
     public static var Up : GKPattern {
         get{
@@ -87,7 +95,11 @@ public class GKPatterns {
     }
 }
 
+/*
+    extensions for [GKPattern]
+*/
 public extension CollectionType where Generator.Element == GKPattern {
+    
     public func aligned() -> Bool {
         if self.count > 0 {
             for index in startIndex..<endIndex {
