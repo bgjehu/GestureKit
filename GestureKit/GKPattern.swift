@@ -21,17 +21,20 @@ public class GKPattern: NSObject {
             return _name
         }
     }
+    
     private var _data = [[Double]]()
     public var data : [[Double]] {
         get{
             return _data
         }
     }
+    
     public var length : Int {
         get{
             return data.count
         }
     }
+    
     public var width : Int {
         get{
             if data.count > 0 {

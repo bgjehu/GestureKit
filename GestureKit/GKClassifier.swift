@@ -8,6 +8,9 @@
 
 import UIKit
 
+/*
+    
+*/
 public class GKClassifier: NSObject {
 
     private var _patterns = [GKPattern]()
@@ -91,9 +94,8 @@ public class GKClassifier: NSObject {
         }
     }
     
-    public func classify(testCase : GKPattern) -> GKGesture? {
-        if testCase.isAlignedWith(patterns[0]) {
-//            let startTime = NSDate()
+    public func classify(data : [Double]) {
+        if let testCase = dataQueue.enque(data) {
             var costs = patterns.map({pattern in GKUtilities.findCost(testCase, rhs: pattern, searchRange: window)})
             
             //  cal delta costs
@@ -124,17 +126,16 @@ public class GKClassifier: NSObject {
                     resultIndex = i
                 }
             }
-//            print("Time for one classification: \(startTime.timeIntervalSinceNow * -1)")
             if resultIndex >= 0 {
                 //  Have result
-                print("NOTIFICATION__________\(patterns[resultIndex].name)__________GONNA BE POSTED!!!!!")
-                return GKGesture(name: patterns[resultIndex].name)
+                let resultGesture = GKGesture(name: patterns[resultIndex].name)
+                resultGesture.postNotification()
+                print("GKClassifier Log: Posted notification \(resultGesture.notificationName)")
             } else {
-                return nil
+                //  No result
             }
         } else {
-//            print("Error classifying GKGesturePattern test case: test case does not align to classifier gesture patterns")
-            return nil
+            print("No testCase: dataQueue is full yet.")
         }
     }
 }
