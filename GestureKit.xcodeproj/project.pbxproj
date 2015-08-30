@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A134FBD01B861684006D533B /* GKAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134FBCF1B861684006D533B /* GKAppDelegate.swift */; };
 		A150A81D1B7D0F48007E8AB3 /* GestureKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A150A81C1B7D0F48007E8AB3 /* GestureKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A150A8241B7D0F48007E8AB3 /* GestureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A150A8191B7D0F48007E8AB3 /* GestureKit.framework */; };
 		A150A8291B7D0F48007E8AB3 /* GestureKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A150A8281B7D0F48007E8AB3 /* GestureKitTests.swift */; };
@@ -31,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A134FBCF1B861684006D533B /* GKAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKAppDelegate.swift; sourceTree = "<group>"; };
 		A150A8191B7D0F48007E8AB3 /* GestureKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GestureKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A150A81C1B7D0F48007E8AB3 /* GestureKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureKit.h; sourceTree = "<group>"; };
 		A150A81E1B7D0F48007E8AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				A150A8361B7D0F8D007E8AB3 /* GKRecorder.swift */,
 				A150A8391B7D0F8D007E8AB3 /* GKUtilities.swift */,
 				A1CBE6A51B7FA4EF009FAF9A /* GKManager.swift */,
-				A134FBCF1B861684006D533B /* GKAppDelegate.swift */,
 				A150A81E1B7D0F48007E8AB3 /* Info.plist */,
 				A150A81C1B7D0F48007E8AB3 /* GestureKit.h */,
 			);
@@ -222,7 +219,6 @@
 				A17D18B71B7D33D40031938E /* GKClassifier.swift in Sources */,
 				A17D18B61B7D33D10031938E /* GKRecorder.swift in Sources */,
 				A17D18B51B7D33CE0031938E /* GKQueue.swift in Sources */,
-				A134FBD01B861684006D533B /* GKAppDelegate.swift in Sources */,
 				A1CBE6A61B7FA4EF009FAF9A /* GKManager.swift in Sources */,
 				A17D18B41B7D33CC0031938E /* GKPattern.swift in Sources */,
 				A17D18B31B7D33C80031938E /* GKGesture.swift in Sources */,
