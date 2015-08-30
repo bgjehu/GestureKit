@@ -94,7 +94,8 @@ public class GKClassifier: NSObject {
         }
     }
     
-    public func classify(data : [Double]) {
+    public func classify(rawData : [Double]) {
+        let data = GKUtilities.quantize(rawData)
         if let testCase = dataQueue.enque(data) {
             var costs = patterns.map({pattern in GKUtilities.findCost(testCase, rhs: pattern, searchRange: window)})
             
